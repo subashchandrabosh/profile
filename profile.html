@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_profile</title>
+    <style>
+      body{
+        font-family: 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      header{
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 2rem 0;
+        position: relative;
+      }
+      .header-content h1{
+        font-size: 2.5rem;
+      }
+      .profile-picture{
+        width: 100px;
+        height: 100px;
+        border-radius: 75%;
+        object-fit: cover;
+        position: absolute;
+        top:75px;
+        left: 75px;
+      }
+      nav{
+        background-color: #fff;
+        text-align: center;
+      }
+      nav ul{
+        list-style-type: none;
+        padding: 0;
+      }
+      nav li{
+        display: inline;
+        margin: 0 20px;
+      }
+      nav li a{
+        text-decoration: none;
+        color:black;
+      }
+      .section-content{
+        background-color: #fff;
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+      }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+         <img src="d:\SSB\HTML\InShot_20231025_191252405.jpg" alt="" class="profile-picture">   
+         <h1>E.SUBASHCHANDRABOSE</E></h1>
+         <p>iam a student</p>
+        </div>
+    </header>
+    <nav>
+        <li><a href="#About">about</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#Project">Project</a></li>
+    </nav>
+    <section id="#About">
+        <div class="section-content">
+          <h2>about_me</h2>
+          <p>iam learning about webdelopment in IBM skill build .</p>
+        </div>
+    </section>
+
+    <section id="#Education">
+        <div class="section-content">
+          <h2>BSC-CS</h2>
+          <p>GOVERNMENT ARTS COLLEGE ARIYALUR</p>
+        </div>
+
+    </section>
+
+    <section id="#Skills">
+        <div class="section-content">
+          <h2>Skills</h2>
+          <ul>
+            <li>C,C++</li>
+            <li>WEBTDEVELOPMENT</li>
+            <li>DATABASE SYSTEM</li>
+            <li>JAVA</li>
+          </ul>
+        </div>
+    </section>
+
+    <section id="#Project">
+        <div class="section-content">
+          <h2>Project</h2>
+          <li><a href="#">project-1</a></li>
+          <li><a href="#">project-2</a></li>
+        </div>
+
+    </section>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click',function(e) {
+          e.preventdefault();
+
+          const targetId=this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          if(targetElement){
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: "smooth"
+            });
+          }
+        });
+      });
+    </script>
+</body>
+</html>
